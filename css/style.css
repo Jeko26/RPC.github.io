@@ -217,8 +217,9 @@ html, body {
 }
 
 .operation__image {
-    width: 450px;
-    height: 250px;
+    width: 350px;
+    height: 200px;
+    margin-right: 30px;
 }
 
 .operation__descr {
@@ -231,4 +232,77 @@ html, body {
 
 .operation__mini-title {
     margin-bottom: 40px;
+}
+
+.operation__card {
+    margin-right: 30px;
+}
+
+.operation__arrow--low {
+    padding-top: 30px;
+    margin-left: 150px;
+}
+
+.Swiper {
+    padding: 60px 0;
+    padding-bottom: 300px;
+    background: url(../image/flag.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: initial;
+    background-size: 100%;
+}
+
+.swiper__container {
+    flex-direction: column;
+}
+
+.swiper__image {
+    width: 800px;
+    height: 500px;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.swiper__descr {
+    color: #000;
+}
+
+.swiper__mini-title {
+    color: #000;
+}
+
+.swiper__title {
+    margin-bottom: 30px;
+}
+
+.swiper__descr:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.swiper__text-box {
+    margin-bottom: 100px;
+}
+
+.swiper__mini-title {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+:root {
+    --swiper-theme-color: rgba(254, 117, 63, 1);
+}
+
+.swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+}
+
+.footer {
+    padding: 20px 0;
 }

@@ -312,13 +312,13 @@ operation__image6.src = 'image/me`r 1.png';
 
 // swiper
 
-const Swiper = document.createElement('section');
-Swiper.classList.add('Swiper');
-document.body.appendChild(Swiper);
+const Swiperr = document.createElement('section');
+Swiperr.classList.add('Swiper');
+document.body.appendChild(Swiperr);
 
 const container6 = document.createElement('div');
-Swiper.appendChild(container6);
-container6.classList.add('container', 'swiper__container');
+Swiperr.appendChild(container6);
+container6.classList.add('container', 'swiper__container', 'swiper');
 
 const swiper__textBox = document.createElement('div');
 container6.appendChild(swiper__textBox);
@@ -343,12 +343,24 @@ const swiperWrapper = document.createElement('div');
 container6.appendChild(swiperWrapper);
 swiperWrapper.classList.add('swiper-wrapper')
 
+const swiperPagination = document.createElement('div');
+container6.appendChild(swiperPagination);
+swiperPagination.classList.add('swiper-pagination')
+
+// const swiperButtonNext = document.createElement('div');
+// container6.appendChild(swiperButtonNext);
+// swiperButtonNext.classList.add('swiper-button-next')
+
+// const swiperButtonPrev = document.createElement('div');
+// container6.appendChild(swiperButtonPrev);
+// swiperButtonPrev.classList.add('swiper-button-prev')
+
 // cлайд 
 const swiperSlide = document.createElement('div');
 swiperWrapper.appendChild(swiperSlide);
 swiperSlide.classList.add('swiper-slide')
 
-const swiper__miniTitle = document.createElement('h3');
+const swiper__miniTitle = document.createElement('p');
 swiperSlide.appendChild(swiper__miniTitle);
 swiper__miniTitle.classList.add('swiper__mini-title', 'simple-text')
 swiper__miniTitle.innerText = '1. Желание заниматься программированием'
@@ -363,7 +375,7 @@ const swiperSlide2 = document.createElement('div');
 swiperWrapper.appendChild(swiperSlide2);
 swiperSlide2.classList.add('swiper-slide')
 
-const swiper__miniTitle2 = document.createElement('h3');
+const swiper__miniTitle2 = document.createElement('p');
 swiperSlide2.appendChild(swiper__miniTitle2);
 swiper__miniTitle2.classList.add('swiper__mini-title', 'simple-text')
 swiper__miniTitle2.innerText = '2. Компьютер или ноутбук'
@@ -378,7 +390,7 @@ const swiperSlide3 = document.createElement('div');
 swiperWrapper.appendChild(swiperSlide3);
 swiperSlide3.classList.add('swiper-slide')
 
-const swiper__miniTitle3 = document.createElement('h3');
+const swiper__miniTitle3 = document.createElement('p');
 swiperSlide3.appendChild(swiper__miniTitle3);
 swiper__miniTitle3.classList.add('swiper__mini-title', 'simple-text')
 swiper__miniTitle3.innerText = '3. Социальная сеть для связи (вк, телеграм) и желательно дискорд'
@@ -393,9 +405,9 @@ const swiperSlide4 = document.createElement('div');
 swiperWrapper.appendChild(swiperSlide4);
 swiperSlide4.classList.add('swiper-slide')
 
-const swiper__miniTitle4 = document.createElement('h3');
+const swiper__miniTitle4 = document.createElement('p');
 swiperSlide4.appendChild(swiper__miniTitle4);
-swiper__miniTitle4.classList.add('swiper__miniTitle')
+swiper__miniTitle4.classList.add('swiper__mini-title', 'simple-text')
 swiper__miniTitle4.innerText = '4. Готовность работать за идею'
 
 const swiper__image4 = document.createElement('img');
@@ -445,3 +457,25 @@ footer__textBox.appendChild(footer__descr3);
 footer__descr3.classList.add('footer__descr')
 footer__descr3.innerText = 'Мой discord'
 footer__descr3.href = 'https://discordapp.com/users/779671502714306570/'
+
+
+
+var swiper = new Swiper(".swiper__container", {
+    cssMode: true,
+    loop: true,
+    // navigation: {
+    //   nextEl: ".swiper-button-next",
+    //   prevEl: ".swiper-button-prev",
+    // },
+    pagination: {
+      el: ".swiper-pagination",
+      type: 'bullets',
+      clickable: true
+    },
+    autoplay: {
+        delay: 4000,
+        disableOnInteraction: false
+    },
+    mousewheel: true,
+    keyboard: true,
+  });
