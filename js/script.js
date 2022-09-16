@@ -429,14 +429,18 @@ const footer__textBox = document.createElement('div');
 container7.appendChild(footer__textBox);
 footer__textBox.classList.add('footer__text-box');
 
+const footer__group = document.createElement('div');
+container7.appendChild(footer__group);
+footer__group.classList.add('footer__group');
+
 const footer__btn = document.createElement('a');
-container7.appendChild(footer__btn);
+footer__group.appendChild(footer__btn);
 footer__btn.classList.add('footer','btn');
 footer__btn.innerText = 'Заплыть в бухту';
 footer__btn.href = '#';
 
 const footer__number = document.createElement('p');
-container7.appendChild(footer__number);
+footer__group.appendChild(footer__number);
 footer__number.classList.add('footer__number');
 footer__number.innerText = '89203689477';
 

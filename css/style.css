@@ -116,21 +116,6 @@ html, body {
     margin-bottom: 60px;
 }
 
-.btn {
-    width: 250px;
-    height: 80px;
-    background: #8E00C0;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    line-height: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-
 .about {
     background-color: black;
     padding: 60px 0;
@@ -246,7 +231,7 @@ html, body {
 .Swiper {
     padding: 60px 0;
     padding-bottom: 300px;
-    background: url(../image/flag.jpeg);
+    background: url(../image/flag4.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: initial;
@@ -304,5 +289,46 @@ html, body {
 }
 
 .footer {
-    padding: 20px 0;
+    padding: 50px 0;
+    background: #000;
+}
+
+.footer__container {
+    justify-content: space-between;
+    padding-right: 0;
+}
+
+.footer__group {
+    display: flex;
+}
+
+.footer__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer__number {
+    transform: rotate(90deg);
+}
+
+.footer__descr, .footer__number {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    width: 250px;
+    height: 80px;
+    background: #8E00C0;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: 'Roboto', sans-serif;
 }
