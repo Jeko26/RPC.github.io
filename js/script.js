@@ -31,7 +31,7 @@ img.src = 'image/logo.png'
 
 const header__links = document.createElement('ul');
 container.appendChild(header__links);
-header__links.classList.add('header__links');
+header__links.classList.add('header__group', 'header__group--burger');
 
 const header__link1 = document.createElement('li');
 header__links.appendChild(header__link1);
@@ -58,7 +58,21 @@ header__links.appendChild(header__link5);
 header__link5.classList.add('header__link', 'simple-text');
 header__link5.innerText = 'Контакты';
 
+const headerBurger = document.createElement('ul');
+container.appendChild(headerBurger);
+headerBurger.classList.add('header__burger', 'burger', 'burger--desable');
 
+const header__burger = document.createElement('li');
+headerBurger.appendChild(header__burger);
+header__burger.classList.add('burger__line');
+
+const header__burger2 = document.createElement('li');
+headerBurger.appendChild(header__burger2);
+header__burger2.classList.add('burger__line');
+
+const header__burger3 = document.createElement('li');
+headerBurger.appendChild(header__burger3);
+header__burger3.classList.add('burger__line');
 // секция full-screen
 
 const fullScreen = document.createElement('section');
@@ -193,7 +207,7 @@ operation__image.src = 'image/48c8.png';
 // карточка плана начало 2
 const operation__card2 = document.createElement('li');
 operation__imageBox.appendChild(operation__card2);
-operation__card2.classList.add('operation__card');
+operation__card2.classList.add('operation__card', 'operation__card-2');
 
 const operation__cardContent2 = document.createElement('div');
 operation__card2.appendChild(operation__cardContent2);
@@ -201,7 +215,7 @@ operation__cardContent2.classList.add('operation__card-content');
 
 const operation__arrow2 = document.createElement('img');
 operation__card2.appendChild(operation__arrow2);
-operation__arrow2.classList.add('operation__arrow');
+operation__arrow2.classList.add('operation__arrow', 'operation__arrow-2');
 operation__arrow2.src = 'image/Arrow 1.png';
 
 const operation__descr2 = document.createElement('p');
@@ -243,7 +257,7 @@ operation__image3.src = 'image/16812593_original 1.png';
 // карточка плана начало 4
 const operation__card4 = document.createElement('li');
 operation__imageBox.appendChild(operation__card4);
-operation__card4.classList.add('operation__card');
+operation__card4.classList.add('operation__card', 'operation__card-4');
 
 const operation__cardContent4 = document.createElement('div');
 operation__card4.appendChild(operation__cardContent4);
@@ -251,7 +265,7 @@ operation__cardContent4.classList.add('operation__card-content');
 
 const operation__arrow4 = document.createElement('img');
 operation__card4.appendChild(operation__arrow4);
-operation__arrow4.classList.add('operation__arrow', 'operation__arrow--left');
+operation__arrow4.classList.add('operation__arrow', 'operation__arrow--left', 'operation__arrow-4', 'operation__arrow--low');
 operation__arrow4.src = 'image/Arrow 1.png';
 
 const operation__descr4 = document.createElement('p');
@@ -417,7 +431,7 @@ swiper__image4.src = 'image/swip4.png';
 
 // footer
 
-const footer = document.createElement('section');
+const footer = document.createElement('footer');
 footer.classList.add('footer');
 document.body.appendChild(footer);
 
@@ -435,7 +449,7 @@ footer__group.classList.add('footer__group');
 
 const footer__btn = document.createElement('a');
 footer__group.appendChild(footer__btn);
-footer__btn.classList.add('footer','btn');
+footer__btn.classList.add('footer__btn','btn');
 footer__btn.innerText = 'Заплыть в бухту';
 footer__btn.href = '#';
 
@@ -483,3 +497,10 @@ var swiper = new Swiper(".swiper__container", {
     mousewheel: true,
     keyboard: true,
   });
+
+let burger = document.querySelector('.burger');
+let links = document.querySelector('.header__group--burger');
+burger.addEventListener('click', function () {
+	links.classList.toggle('burger--open');
+	burger.classList.toggle('burger--cross');
+});
